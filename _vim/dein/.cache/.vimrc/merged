@@ -1,0 +1,2 @@
+100
+['davidhalter/jedi-vim', 'ervandew/supertab', 'nathanaelkane/vim-indent-guides', 'nvie/vim-flake8', 'scrooloose/nerdtree', 'simeji/winresizer', 'vim-syntastic/syntastic']

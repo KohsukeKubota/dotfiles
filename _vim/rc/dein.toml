@@ -1,0 +1,21 @@
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'simeji/winresizer'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+
+[[plugins]]
+repo = 'nvie/vim-flake8'
+
+[[plugins]]
+repo = 'ervandew/supertab'
