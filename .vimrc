@@ -69,7 +69,11 @@ set tabstop=4
 set tabstop=2
 " print space of tab in beginning of line
 set shiftwidth=2
-
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+augroup END
+autocmd FileType python setlocal completeopt-=preview
 " autocomplete  
 " command line autocomplete 
 set wildmenu
@@ -114,7 +118,6 @@ if dein#load_state(s:dein_dir)
   let s:toml = g:rc_dir . '/dein.toml'
 
   call dein#load_toml(s:toml, {'lazy': 0})
-
   call dein#end()
   call dein#save_state()
 endif

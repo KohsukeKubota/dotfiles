@@ -31,8 +31,7 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
@@ -126,5 +125,22 @@ export PATH="/home/kohsuke/anaconda3/bin:$PATH"
 export SDKMAN_DIR="/home/kohsuke/.sdkman"
 [[ -s "/home/kohsuke/.sdkman/bin/sdkman-init.sh" ]] && source "/home/kohsuke/.sdkman/bin/sdkman-init.sh"
 
+# Set editor vim
+export EDITOR=vim
+alias vi="vim"
+
 # set vi keybind
 set -o vi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/kohsuke/google-cloud-sdk/path.bash.inc' ]; then . '/home/kohsuke/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/kohsuke/google-cloud-sdk/completion.bash.inc' ]; then . '/home/kohsuke/google-cloud-sdk/completion.bash.inc'; fi
+
+# GCE command alias
+alias gcp="gcloud compute copy-files"
+alias glist="gclooud compute instances list"
+alias gsh="gcloud compute ssh"
+alias gup="gcloud compute instances start"
+alias gdown="gcloud compute instances stop"
