@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -140,7 +140,7 @@ if [ -f '/home/kohsuke/google-cloud-sdk/completion.bash.inc' ]; then . '/home/ko
 
 # GCE command alias
 alias gcp="gcloud compute copy-files"
-alias glist="gclooud compute instances list"
+alias glist="gcloud compute instances list"
 alias gsh="gcloud compute ssh"
 alias gup="gcloud compute instances start"
 alias gdown="gcloud compute instances stop"
