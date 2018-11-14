@@ -32,3 +32,6 @@ repo = 'nvie/vim-flake8'
 
 [[plugins]]
 repo = 'ervandew/supertab'
+
+[[plugins]]
+repo = 'terryma/vim-expand-region'

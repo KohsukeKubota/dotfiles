@@ -87,6 +87,10 @@ inoremap [ []<Left>
 " autocomplete quotes
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
+" python config
+autocmd FileType python setl autoindent
+autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " search
 " search characters regardless of size
@@ -99,6 +103,27 @@ set incsearch
 set hlsearch
 " release hilight in repeatedly <Esc>
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+" switch Leader to Space
+let mapleader = "\<Space>"
+" open new file with <Space>o
+nnoremap <Leader>o :CtrlP<CR>
+" save file with <Space>w
+nnoremap <Leader>w w<CR>
+" switch visual line mode with <Space><Space>
+nmap <Leader><Leader> V
+" use vim-expand-region
+" we can use the below command
+" select 1 character with v
+" select 1 word with vv
+" select 1 paragraph with vvv
+" retutn the before range with <C-v>
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+" move to end of file
+nnoremap <CR> G
+" move to start of file
+nnoremap <BS> gg
 
 " plugin 'dein'
 let s:dein_dir=expand('~/.vim/dein')
